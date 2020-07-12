@@ -46,7 +46,7 @@ router.post('/', [auth, [
 
     } catch (err) {
         console.error(err.message)
-        return res.status(500).json({ json: "Server Error" })
+        return res.status(500).json({ msg: "Server Error" })
     }
 })
 

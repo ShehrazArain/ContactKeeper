@@ -7,7 +7,7 @@ const ContactFilter = () => {
 
   useEffect(() => {
     if (filtered === null) {
-      text.current.value = '';
+      text.current.value = ''; // we have access of current because we are using useRef
     }
   })
 

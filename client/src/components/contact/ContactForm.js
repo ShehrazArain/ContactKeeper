@@ -7,7 +7,7 @@ const ContactForm = () => {
   const { addContact, current, clearContact, updateContact } = contactContext;
   useEffect(() => {
     if (current !== null) {
-      setContact(current);
+      setContact(current)
     } else {
       setContact({
         name: '',
@@ -16,7 +16,8 @@ const ContactForm = () => {
         type: 'personal'
       })
     }
-  }, [contactContext, current])
+    // eslint-disable-next-line
+  }, [current])
 
   const [contact, setContact] = useState({
     name: '',
@@ -41,6 +42,12 @@ const ContactForm = () => {
       updateContact(contact);
     }
     clearAll();
+    setContact({
+      name: '',
+      email: '',
+      phone: '',
+      type: 'personal'
+    })
   }
 
   return (
